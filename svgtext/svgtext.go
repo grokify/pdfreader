@@ -9,15 +9,16 @@
 package svgtext
 
 import (
-	"github.com/nathankerr/pdfreader"
-	"github.com/nathankerr/pdfreader/cmapi"
-	"github.com/nathankerr/pdfreader/cmapt"
-	"github.com/nathankerr/pdfreader/fancy"
-	"github.com/nathankerr/pdfreader/graf"
-	"github.com/nathankerr/pdfreader/ps"
-	"github.com/nathankerr/pdfreader/strm"
-	"github.com/nathankerr/pdfreader/util"
 	"io/ioutil"
+
+	"github.com/grokify/pdfreader"
+	"github.com/grokify/pdfreader/cmapi"
+	"github.com/grokify/pdfreader/cmapt"
+	"github.com/grokify/pdfreader/fancy"
+	"github.com/grokify/pdfreader/graf"
+	"github.com/grokify/pdfreader/ps"
+	"github.com/grokify/pdfreader/strm"
+	"github.com/grokify/pdfreader/util"
 )
 
 const WIDTH_DENSITY = 10000

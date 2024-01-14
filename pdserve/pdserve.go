@@ -10,12 +10,13 @@ package main
 
 import (
 	"fmt"
-	"github.com/nathankerr/pdfreader"
-	"github.com/nathankerr/pdfreader/strm"
-	"github.com/nathankerr/pdfreader/svg"
 	"io"
 	"net/http"
 	"os"
+
+	"github.com/grokify/pdfreader"
+	"github.com/grokify/pdfreader/strm"
+	"github.com/grokify/pdfreader/svg"
 )
 
 var pd *pdfreader.PdfReaderT

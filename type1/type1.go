@@ -9,12 +9,13 @@ package type1
 
 import (
 	"fmt"
-	"github.com/nathankerr/pdfreader/fancy"
-	"github.com/nathankerr/pdfreader/hex"
-	"github.com/nathankerr/pdfreader/ps"
-	"github.com/nathankerr/pdfreader/stacks"
-	"github.com/nathankerr/pdfreader/strm"
-	"github.com/nathankerr/pdfreader/util"
+
+	"github.com/grokify/pdfreader/fancy"
+	"github.com/grokify/pdfreader/hex"
+	"github.com/grokify/pdfreader/ps"
+	"github.com/grokify/pdfreader/stacks"
+	"github.com/grokify/pdfreader/strm"
+	"github.com/grokify/pdfreader/util"
 )
 
 // Type1 Font "interpreter" - this PS btw.

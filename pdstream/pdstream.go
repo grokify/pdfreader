@@ -10,9 +10,10 @@ package main
 
 import (
 	"fmt"
-	"github.com/nathankerr/pdfreader"
-	"github.com/nathankerr/pdfreader/util"
 	"os"
+
+	"github.com/grokify/pdfreader"
+	"github.com/grokify/pdfreader/util"
 )
 
 // The program takes a PDF file and an object reference of a stream.

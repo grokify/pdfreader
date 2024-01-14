@@ -10,12 +10,13 @@ package main
 
 import (
 	"fmt"
-	"github.com/nathankerr/pdfreader/fancy"
-	"github.com/nathankerr/pdfreader/pfb"
-	"github.com/nathankerr/pdfreader/type1"
-	"github.com/nathankerr/pdfreader/util"
 	"io/ioutil"
 	"os"
+
+	"github.com/grokify/pdfreader/fancy"
+	"github.com/grokify/pdfreader/pfb"
+	"github.com/grokify/pdfreader/type1"
+	"github.com/grokify/pdfreader/util"
 )
 
 // use this program with a pfa-font - it is only here for testing

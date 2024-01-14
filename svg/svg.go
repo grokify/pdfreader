@@ -10,13 +10,14 @@ package svg
 
 import (
 	"fmt"
-	"github.com/nathankerr/pdfreader"
-	"github.com/nathankerr/pdfreader/fancy"
-	"github.com/nathankerr/pdfreader/strm"
-	"github.com/nathankerr/pdfreader/svgdraw"
-	"github.com/nathankerr/pdfreader/svgtext"
-	"github.com/nathankerr/pdfreader/util"
 	"os"
+
+	"github.com/grokify/pdfreader"
+	"github.com/grokify/pdfreader/fancy"
+	"github.com/grokify/pdfreader/strm"
+	"github.com/grokify/pdfreader/svgdraw"
+	"github.com/grokify/pdfreader/svgtext"
+	"github.com/grokify/pdfreader/util"
 )
 
 func complain(err string) {

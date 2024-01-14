@@ -9,8 +9,8 @@
 package ps
 
 import (
-	"github.com/nathankerr/pdfreader/fancy"
-	"github.com/nathankerr/pdfreader/hex"
+	"github.com/grokify/pdfreader/fancy"
+	"github.com/grokify/pdfreader/hex"
 )
 
 func SkipLE(f fancy.Reader) {

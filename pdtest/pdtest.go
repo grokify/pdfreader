@@ -2,8 +2,9 @@ package main
 
 import (
 	"fmt"
-	"github.com/nathankerr/pdfreader"
 	"os"
+
+	"github.com/grokify/pdfreader"
 )
 
 // Example program for pdfread.go

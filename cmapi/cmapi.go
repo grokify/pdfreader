@@ -8,11 +8,11 @@
 package cmapi
 
 import (
-	"github.com/nathankerr/pdfreader/cmapt"
-	"github.com/nathankerr/pdfreader/fancy"
-	"github.com/nathankerr/pdfreader/ps"
-	"github.com/nathankerr/pdfreader/stacks"
-	"github.com/nathankerr/pdfreader/xchar"
+	"github.com/grokify/pdfreader/cmapt"
+	"github.com/grokify/pdfreader/fancy"
+	"github.com/grokify/pdfreader/ps"
+	"github.com/grokify/pdfreader/stacks"
+	"github.com/grokify/pdfreader/xchar"
 )
 
 // CMap "interpreter" - this PS btw.

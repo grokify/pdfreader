@@ -11,12 +11,13 @@ package pdfreader
 import (
 	"compress/zlib"
 	"encoding/ascii85"
-	"github.com/nathankerr/pdfreader/fancy"
-	"github.com/nathankerr/pdfreader/hex"
-	"github.com/nathankerr/pdfreader/lzw"
-	"github.com/nathankerr/pdfreader/ps"
 	"log"
 	"regexp"
+
+	"github.com/grokify/pdfreader/fancy"
+	"github.com/grokify/pdfreader/hex"
+	"github.com/grokify/pdfreader/lzw"
+	"github.com/grokify/pdfreader/ps"
 )
 
 // limits
