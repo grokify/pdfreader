@@ -8,6 +8,12 @@ Other people do have other issues. So some people are not willing to type ";" (s
 
 So well, the things are interesting.
 
-I do use * code generators written in Perl * an autoimporter for needed packages * a dependency-finder for the Makefiles to make work with the sources more suitable. I hope that at some day I do not need the code generators in some special cases (as I use they now, they will be useful forever ;) ) and that I do not need the autoimporter anymore. The autoimporter would be better located inside the compiler. How these two things are organized will change what is needed for the dependency-finder. Until a really good solution is out there, I'd say the things should stay the same as they are now (Dec. 22 2009 update).
+I do use
+
+* code generators written in Perl
+* an autoimporter for needed packages
+* a dependency-finder for the Makefiles to make work with the sources more suitable.
+
+I hope that at some day I do not need the code generators in some special cases (as I use they now, they will be useful forever :wink: ) and that I do not need the autoimporter anymore. The autoimporter would be better located inside the compiler. How these two things are organized will change what is needed for the dependency-finder. Until a really good solution is out there, I'd say the things should stay the same as they are now (Dec. 22 2009 update).
 
 Please comment if you have some ideas. I'll update this page as far as I have time.
