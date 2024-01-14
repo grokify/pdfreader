@@ -103,9 +103,9 @@ func Mul(a, b string) string {
 	for d%nv != 0 {
 		d *= 10
 	}
-	i = i.Mul(i, big.NewInt(int64(d/nv)))
+	i = i.Mul(i, big.NewInt(d/nv))
 	if int64(f) < d {
-		i = i.Div(i, big.NewInt(int64(d/int64(f))))
+		i = i.Div(i, big.NewInt(d/int64(f)))
 		d = int64(f)
 	}
 	return String(i.Int64(), int(d))
@@ -123,7 +123,7 @@ func Sub(a, b string) string {
 
 func Neg(a string) string {
 	if a[0] == '-' {
-		return a[1:len(a)]
+		return a[1:]
 	}
 	ra, f := operand(a)
 	return String(-ra, f)

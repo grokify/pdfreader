@@ -20,7 +20,7 @@ var wrongUniCode = xchar.Utf8(-1)
 func Bytes(a string) []byte {
 	r := make([]byte, len(a))
 	for k := 0; k < len(a); k++ {
-		r[k] = byte(a[k])
+		r[k] = a[k]
 	}
 	return r
 }

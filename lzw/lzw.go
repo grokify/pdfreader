@@ -13,11 +13,11 @@ import (
 )
 
 const (
-	_LZW_EOD       = 257
-	_LZW_RESET     = 256
-	_LZW_DICSIZE   = 4096
-	_LZW_STARTBITS = 9
-	_LZW_STARTUTOK = 258
+	lzwEOD       = 257
+	lzwReset     = 256
+	lzwDicSize   = 4096
+	lzwStartBits = 9
+	lzwStartUTOK = 258
 )
 
 type lzwDecoder struct {
@@ -27,8 +27,8 @@ type lzwDecoder struct {
 }
 
 func (lzw *lzwDecoder) reset() {
-	lzw.bc = _LZW_STARTBITS
-	lzw.cp = _LZW_STARTUTOK - 1
+	lzw.bc = lzwStartBits
+	lzw.cp = lzwStartUTOK - 1
 }
 
 func newLzwDecoder(s []byte, early bool) (lzw *lzwDecoder) {
@@ -40,7 +40,7 @@ func newLzwDecoder(s []byte, early bool) (lzw *lzwDecoder) {
 }
 
 func (lzw *lzwDecoder) update() bool {
-	if lzw.cp < _LZW_DICSIZE-1 {
+	if lzw.cp < lzwDicSize-1 {
 		lzw.cp++
 		cmp := lzw.cp
 		if lzw.early {
@@ -62,7 +62,7 @@ func (lzw *lzwDecoder) update() bool {
 func (lzw *lzwDecoder) token() (r int) {
 	for {
 		r = lzw.bits.Get(lzw.bc)
-		if r != _LZW_RESET {
+		if r != lzwReset {
 			break
 		}
 		lzw.reset()
@@ -72,11 +72,11 @@ func (lzw *lzwDecoder) token() (r int) {
 
 func DecodeToSlice(s []byte, out []byte, early bool) (r int) {
 	lzw := newLzwDecoder(s, early)
-	dict := make([][]byte, _LZW_DICSIZE)
+	dict := make([][]byte, lzwDicSize)
 	for i := 0; i <= 255; i++ {
 		dict[i] = []byte{byte(i)}
 	}
-	for c := lzw.token(); c != _LZW_EOD; c = lzw.token() {
+	for c := lzw.token(); c != lzwEOD; c = lzw.token() {
 		k := r
 		for i := 0; i < len(dict[c]); i++ {
 			out[r] = dict[c][i]
@@ -91,11 +91,11 @@ func DecodeToSlice(s []byte, out []byte, early bool) (r int) {
 
 func CalculateLength(s []byte, early bool) (r int) {
 	lzw := newLzwDecoder(s, early)
-	dict := make([]int, _LZW_DICSIZE)
+	dict := make([]int, lzwDicSize)
 	for i := 0; i <= 255; i++ {
 		dict[i] = 1
 	}
-	for c := lzw.token(); c != _LZW_EOD; c = lzw.token() {
+	for c := lzw.token(); c != lzwEOD; c = lzw.token() {
 		r += dict[c]
 		if lzw.update() {
 			dict[lzw.cp] = dict[c] + 1
