@@ -11,7 +11,6 @@ package fancy
 import (
 	"bufio"
 	"io"
-	"io/ioutil"
 	"os"
 )
 
@@ -239,7 +238,7 @@ func ReadAndClose(f io.ReadCloser, err error) []byte {
 	if err != nil {
 		return []byte{}
 	}
-	r, _ := ioutil.ReadAll(f)
+	r, _ := io.ReadAll(f)
 	f.Close()
 	return r
 }
@@ -257,7 +256,7 @@ func FileReader(fn string) Reader {
 }
 
 func ReadAll(f io.Reader) []byte {
-	r, _ := ioutil.ReadAll(f)
+	r, _ := io.ReadAll(f)
 	return r
 }
 

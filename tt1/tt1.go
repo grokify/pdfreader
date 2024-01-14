@@ -10,7 +10,6 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
 	"os"
 
 	"github.com/grokify/pdfreader/fancy"
@@ -44,7 +43,7 @@ func dumpT1(i *type1.TypeOneI) {
 }
 
 func main() {
-	a, _ := ioutil.ReadFile(os.Args[1])
+	a, _ := os.ReadFile(os.Args[1])
 	if a[0] == 128 {
 		a = pfb.Decode(a)
 	}

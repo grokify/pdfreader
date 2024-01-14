@@ -9,7 +9,7 @@
 package svgtext
 
 import (
-	"io/ioutil"
+	"os"
 
 	"github.com/grokify/pdfreader"
 	"github.com/grokify/pdfreader/cmapi"
@@ -79,7 +79,7 @@ func fontnamemap(fn string) int {
 		styles = make(map[string]string)
 	}
 
-	data, _ := ioutil.ReadFile(fn)
+	data, _ := os.ReadFile(fn)
 	no := 0
 	for p := 0; p < len(data); {
 		n := string(csvtok(data[p:]))
