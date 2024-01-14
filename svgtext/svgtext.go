@@ -24,17 +24,17 @@ import (
 const WIDTH_DENSITY = 10000
 
 type SvgTextT struct {
-	Pdf      *pdfreader.PdfReaderT
+	Pdf      *pdfreader.PDFReader
 	Drw      *graf.PdfDrawerT
 	Page     int
 	matrix   []string
-	fonts    pdfreader.DictionaryT
+	fonts    pdfreader.Dictionary
 	fontw    map[string]*cmapt.CMapT
 	x0, x, y string
 	cmaps    map[string]*cmapi.CharMapperT
 }
 
-func New(pdf *pdfreader.PdfReaderT, drw *graf.PdfDrawerT) *SvgTextT {
+func New(pdf *pdfreader.PDFReader, drw *graf.PdfDrawerT) *SvgTextT {
 	r := new(SvgTextT)
 	drw.Text = r
 	r.Drw = drw

@@ -19,7 +19,7 @@ import (
 	"github.com/grokify/pdfreader/svg"
 )
 
-var pd *pdfreader.PdfReaderT
+var pd *pdfreader.PDFReader
 
 // hello world, the web server
 func HelloServer(w http.ResponseWriter, req *http.Request) {

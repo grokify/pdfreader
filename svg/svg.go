@@ -25,7 +25,7 @@ func complain(err string) {
 	os.Exit(1)
 }
 
-func Page(pd *pdfreader.PdfReaderT, page int) []byte {
+func Page(pd *pdfreader.PDFReader, page int) []byte {
 	pg := pd.Pages()
 	if page >= len(pg) {
 		complain("Page does not exist!\n")
