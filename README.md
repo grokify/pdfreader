@@ -28,3 +28,10 @@ If you are willing to make experiments, just checkout at http://code.google.com/
 This shows an SVG displayed in Inkscape that was converted from a PDF:
 
 [`example-convert.png`](example-convert.png)
+
+## Credits
+
+1. This library was originally created by Helmar Wodtke and available on Google Code: https://code.google.com/archive/p/pdfreader/ . This code is available under the MIT license.
+1. This library is forked from a GitHub repo maintained by Nathan Kerr here: https://github.com/nathankerr/pdfreader . The benefit of this repo is that it maintains the commit history from Google Code Archive. This may have been possible via the "Export to GitHub" button on Google Code Archive which no longer appears to work. Additionally, the code from Nathan here is also under the MIT license.
+1. Another fork was created by James Healy here https://github.com/yob/pdfreader , however, it does not maintian Helmar's original commit history.
+1. Another fork was created by Raffaele Sena here https://github.com/raff/pdfreader , however, it is based on Healy's fork so the original commit history is lost, and the license is unknown for Raffaele's additional code.
