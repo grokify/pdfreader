@@ -1,5 +1,10 @@
 # pdfreader
 
+[![Build Status][build-status-svg]][build-status-url]
+[![Go Report Card][goreport-svg]][goreport-url]
+[![Docs][docs-godoc-svg]][docs-godoc-url]
+[![License][license-svg]][license-url]
+
 ## Introduction
 
 The pdfreader library for Go is a library to read contents of PDF files.
@@ -35,3 +40,16 @@ This shows an SVG displayed in Inkscape that was converted from a PDF:
 1. This library is forked from a GitHub repo maintained by Nathan Kerr here: https://github.com/nathankerr/pdfreader . The benefit of this repo is that it maintains the commit history from Google Code Archive. This may have been possible via the "Export to GitHub" button on Google Code Archive which no longer appears to work. Additionally, the code from Nathan here is also under the MIT license.
 1. Another fork was created by James Healy here https://github.com/yob/pdfreader , however, it does not maintian Helmar's original commit history.
 1. Another fork was created by Raffaele Sena here https://github.com/raff/pdfreader , however, it is based on Healy's fork so the original commit history is lost, and the license is unknown for Raffaele's additional code.
+
+ [used-by-svg]: https://sourcegraph.com/github.com/grokify/pdfreader/-/badge.svg
+ [used-by-url]: https://sourcegraph.com/github.com/grokify/pdfreader?badge
+ [build-status-svg]: https://github.com/grokify/pdfreader/workflows/test/badge.svg
+ [build-status-url]: https://github.com/grokify/pdfreader/actions/workflows/test.yaml
+ [goreport-svg]: https://goreportcard.com/badge/github.com/grokify/pdfreader
+ [goreport-url]: https://goreportcard.com/report/github.com/grokify/pdfreader
+ [docs-godoc-svg]: https://pkg.go.dev/badge/github.com/grokify/pdfreader
+ [docs-godoc-url]: https://pkg.go.dev/github.com/grokify/pdfreader
+ [loc-svg]: https://tokei.rs/b1/github/grokify/pdfreader
+ [repo-url]: https://github.com/grokify/pdfreader
+ [license-svg]: https://img.shields.io/badge/license-MIT-blue.svg
+ [license-url]: https://github.com/grokify/pdfreader/blob/master/LICENSE
